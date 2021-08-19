@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": [
+      "es6",
+      "dom",
+      "es2017",
+      "es7"
+    ],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "module": "commonjs",
+    "rootDir": "./src",
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "removeComments": true,
+    "noEmit": false,
+    "noEmitOnError": false,
+    "preserveConstEnums": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "alwaysStrict": true,
+    "skipLibCheck": true
+  }
+}
