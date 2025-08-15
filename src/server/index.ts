@@ -1,5 +1,6 @@
 import express from 'express'
 import cors from 'cors'
+import path from 'path'
 import { URLController } from '../../controllers/URLController'
 import { MongoConnection } from '../../database/MongoConnection'
 
@@ -13,7 +14,7 @@ api.use(express.json())
 const mongoConnection = new MongoConnection()
 mongoConnection.connect()
 
-// Rotas
+// Rotas da API
 const urlController = new URLController()
 api.post("/api/shorten", urlController.shorten)
 api.get("/api/:hash", urlController.redirect)
@@ -24,11 +25,16 @@ api.get("/api", (req, res) => {
 })
 
 // Servir arquivos estáticos do frontend
-api.use(express.static('public'))
+api.use(express.static(path.join(__dirname, '../../../public')))
 
-// Rota para o frontend
+// Rota para o frontend (deve vir depois das rotas da API)
 api.get("/", (req, res) => {
-    res.sendFile('public/index.html', { root: '.' })
+    res.sendFile(path.join(__dirname, '../../../public/index.html'))
+})
+
+// Rota para qualquer outra página (SPA)
+api.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, '../../../public/index.html'))
 })
 
 api.listen(5000, () => console.log('🚀 Servidor rodando na porta 5000'))
