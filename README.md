@@ -12,6 +12,9 @@ Um serviço completo de encurtamento de URLs desenvolvido em TypeScript com Node
 - ✅ **Copiar URL**: Botão para copiar URLs encurtadas
 - ✅ **Feedback Visual**: Loading states e mensagens de erro
 
+<img width="1291" height="576" alt="image" src="https://github.com/user-attachments/assets/2c7a09c5-ec7e-4b2e-b667-3efc2603f2f3" />
+
+
 ## 📋 Pré-requisitos
 
 - Node.js (versão 14 ou superior)
