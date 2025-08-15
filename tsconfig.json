@@ -10,9 +10,9 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "module": "commonjs",
-    "rootDir": "./src",
+    "rootDir": "./",
     "moduleResolution": "node",
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "resolveJsonModule": true,
     "sourceMap": true,
     "outDir": "./dist",
@@ -26,5 +26,16 @@
     "noImplicitAny": true,
     "alwaysStrict": true,
     "skipLibCheck": true
-  }
+  },
+  "include": [
+    "src/**/*",
+    "controllers/**/*",
+    "database/**/*",
+    "config/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "public"
+  ]
 }
