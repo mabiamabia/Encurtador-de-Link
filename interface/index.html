@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encurtador de Links</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-link"></i>
+                <h1>Encurtador de Links</h1>
+            </div>
+            <p class="subtitle">Transforme URLs longas em links curtos e fáceis de compartilhar</p>
+        </header>
+
+        <main class="main">
+            <div class="url-form">
+                <div class="input-group">
+                    <input type="url" id="urlInput" placeholder="Cole sua URL aqui..." required>
+                    <button id="shortenBtn" class="btn-primary">
+                        <i class="fas fa-cut"></i>
+                        Encurtar
+                    </button>
+                </div>
+                <div id="loading" class="loading hidden">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    Encurtando...
+                </div>
+            </div>
+
+            <div id="result" class="result hidden">
+                <h3>URL Encurtada:</h3>
+                <div class="result-content">
+                    <div class="url-display">
+                        <input type="text" id="shortUrl" readonly>
+                        <button id="copyBtn" class="btn-secondary">
+                            <i class="fas fa-copy"></i>
+                            Copiar
+                        </button>
+                    </div>
+                    <div class="url-info">
+                        <p><strong>URL Original:</strong> <span id="originalUrl"></span></p>
+                        <p><strong>Criado em:</strong> <span id="createdAt"></span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="error" class="error hidden">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span id="errorMessage"></span>
+            </div>
+        </main>
+
+        <section class="features">
+            <h2>Por que usar nosso encurtador?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Rápido</h3>
+                    <p>Encurte URLs em segundos</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Seguro</h3>
+                    <p>Links seguros e confiáveis</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Responsivo</h3>
+                    <p>Funciona em qualquer dispositivo</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Gratuito</h3>
+                    <p>100% gratuito para sempre</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2024 Encurtador de Links. Desenvolvido com ❤️</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

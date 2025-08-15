@@ -67,7 +67,7 @@ Encurtador-de-Link/
 │   └── URL.ts                   # Modelo de dados
 ├── config/
 │   └── Constants.ts             # Configurações
-├── public/                      # Frontend
+├── interface/                   # Frontend
 │   ├── index.html              # Página principal
 │   ├── styles.css              # Estilos CSS
 │   └── script.js               # JavaScript
@@ -147,7 +147,7 @@ O frontend inclui:
 
 ### **Frontend não carrega**
 - Verifique se o servidor está rodando
-- Confirme se os arquivos em `public/` existem
+- Confirme se os arquivos em `interface/` existem
 
 ## 📝 Próximas Melhorias
 

@@ -25,16 +25,16 @@ api.get("/api", (req, res) => {
 })
 
 // Servir arquivos estáticos do frontend
-api.use(express.static(path.join(__dirname, '../../../public')))
+api.use(express.static(path.join(__dirname, '../../../interface')))
 
 // Rota para o frontend (deve vir depois das rotas da API)
 api.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, '../../../public/index.html'))
+    res.sendFile(path.join(__dirname, '../../../interface/index.html'))
 })
 
 // Rota para qualquer outra página (SPA)
 api.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, '../../../public/index.html'))
+    res.sendFile(path.join(__dirname, '../../../interface/index.html'))
 })
 
 api.listen(5000, () => console.log('🚀 Servidor rodando na porta 5000'))
