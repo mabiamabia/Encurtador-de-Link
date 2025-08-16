@@ -5,6 +5,7 @@ import { URLController } from '../../controllers/URLController'
 import { MongoConnection } from '../../database/MongoConnection'
 
 const api = express()
+const PORT = process.env.PORT || 5000
 
 // Middlewares
 api.use(cors())
@@ -21,7 +22,7 @@ api.get("/api/:hash", urlController.redirect)
 
 // Rota de teste da API
 api.get("/api", (req, res) => {
-    res.json({ message: "Encurtador de Links API funcionando!" })
+    res.json({ message: "LinkLift API funcionando!" })
 })
 
 // Servir arquivos estáticos do frontend
@@ -37,4 +38,4 @@ api.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, '../../../interface/index.html'))
 })
 
-api.listen(5000, () => console.log('🚀 Servidor rodando na porta 5000'))
+api.listen(PORT, () => console.log(`🚀 LinkLift rodando na porta ${PORT}`))
